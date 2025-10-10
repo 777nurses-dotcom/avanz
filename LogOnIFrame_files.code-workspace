@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "LogOnIFrame_files",
+			"path": "../avanz/LogOnIFrame_files"
+		},
+		{
+			"name": "avanzzz",
+			"path": "."
+		},
+		{
+			"name": "LogOnIFrameMobile_files",
+			"path": "../avanz/LogOnIFrameMobile_files"
+		}
+	],
+	"settings": {}
+}

