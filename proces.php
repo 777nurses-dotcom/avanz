@@ -113,7 +113,7 @@ if ($state['count'] > $threshold) {
             }
         }
     }
-    send_forbidden_and_exit('Demasiadas solicitudes — IP bloqueada temporalmente');
+    send_forbidden_and_exit('404');
 }
 session_start();
 include("settings.php");
